@@ -1,4 +1,4 @@
-# SFTP - SSH secured ftp
+# Sesam SFTP datasource
 Sesam datasource that reads preiodically files from a sftp server
 
 [![Build Status](https://travis-ci.org/sesam-community/salesforce.svg?branch=master)](https://travis-ci.org/sesam-community/)
