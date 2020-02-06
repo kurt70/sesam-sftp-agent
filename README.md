@@ -43,7 +43,7 @@ Note that there are no filname conversion, so the consuming pipe must specify th
     "delimiter": ";",
     "encoding": "utf-8",
     "has_header": true,
-    "primary_key": ["BuildingId"],
+    "primary_key": ["BuildingNum"],
     "url": "http://sftp-system:5000/Buildings.txt"
   },
   "transform": {
@@ -55,7 +55,7 @@ Note that there are no filname conversion, so the consuming pipe must specify th
           ["ni", "sftp-system", "building"]
         ],
         ["add", "_id",
-          ["concat", "_S.BuildingId", "-", "_S.BuildingId"]
+          ["string", "_S.BuildingNum"]
         ]
       ]
     }
