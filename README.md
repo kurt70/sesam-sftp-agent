@@ -9,7 +9,8 @@ These files are then exposed via a http proxy and can then be consumed by a url 
 the adress will then be : http://[system._id]:[PROXY_PORT]/
 Note that there are no filname conversion, so the consuming pipe must specify the correct name of the file with correct casing.
 ### Example system config
-```{
+```
+{
   "_id": "sftp-system",
   "type": "system:microservice",
   "connect_timeout": 60,
@@ -28,9 +29,12 @@ Note that there are no filname conversion, so the consuming pipe must specify th
   },
   "read_timeout": 7200,
   "verify_ssl": false
-}```
+}
+```
+
 ### Example pipe config
-```{
+```
+{
   "_id": "sftp-system-building",
   "type": "pipe",
   "source": {
@@ -60,4 +64,5 @@ Note that there are no filname conversion, so the consuming pipe must specify th
     "cron_expression": "0 08 * * *",
     "mode": "scheduled"
   }
-}```
+}
+```
