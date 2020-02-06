@@ -3,12 +3,12 @@ Sesam datasource that reads preiodically files from a sftp server
 
 [![Build Status](https://travis-ci.org/sesam-community/salesforce.svg?branch=master)](https://travis-ci.org/sesam-community/)
 
-##Usage
+## Usage
 This datasource consist of a SFTP client that periodically downloads all files from a given SFTP server/folder.
 These files are then exposed via a http proxy and can then be consumed by a url pipe.
 the adress will then be : http://[system._id]:[PROXY_PORT]/
 Note that there are no filname conversion, so the consuming pipe must specify the correct name of the file with correct casing.
-###Example system config
+### Example system config
 {
   "_id": "sftp-system",
   "type": "system:microservice",
@@ -29,7 +29,7 @@ Note that there are no filname conversion, so the consuming pipe must specify th
   "read_timeout": 7200,
   "verify_ssl": false
 }
-###Example pipe config
+### Example pipe config
 {
   "_id": "sftp-system-building",
   "type": "pipe",
