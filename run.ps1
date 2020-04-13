@@ -1,0 +1,1 @@
+docker run -p 8880:5000 -i -t -e CRON_EXPRESSION='*/1 * * * *' kurtmonge/sesam-sftp-agent

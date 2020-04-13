@@ -1,0 +1,1 @@
+docker build -t kurtmonge/sesam-sftp-agent .

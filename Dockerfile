@@ -7,7 +7,7 @@ ENV SFT_PWD="Password"
 ENV SFT_HOST_PATH="/"
 ENV PROXY_PORT="5000"
 
-COPY files/get-files.sh /scripts/
+WORKDIR /scripts
 COPY files/*.sh /scripts/
 RUN apt-get update && apt-get install sshpass -y && apt-get install cron -y && chmod u+x /scripts/*.sh
 WORKDIR /www
